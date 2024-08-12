@@ -25,6 +25,10 @@ steps:
     displayName: 'Use Python $(python.version)'
 
   - script: |
+      echo "Build Number: $(Build.BuildNumber)"
+      displayName: 'Print Build Number'
+      
+  - script: |
       python -m pip install --upgrade pip
       pip install -r requirements.txt
     displayName: 'Install dependencies'
@@ -48,3 +52,4 @@ steps:
       pip install pytest pytest-azurepipelines
       pytest
     displayName: 'pytest'
+
