@@ -26,7 +26,7 @@ steps:
 
   - script: |
       echo "Build Number: $(Build.BuildNumber)"
-      displayName: 'Print Build Number'
+    displayName: 'Print Build Number'
       
   - script: |
       python -m pip install --upgrade pip
